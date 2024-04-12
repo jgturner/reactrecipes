@@ -1,13 +1,279 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Reem Kufi Fun', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+ul {
+  padding: 0px;
+}
+
+label,
+p,
+.message {
+  font-family: sans-serif;
+}
+
+aside {
+  position: relative;
+}
+
+header {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+.header h1 {
+  color: #000;
+  text-align: center;
+}
+
+.header img {
+  max-width: 100px;
+}
+
+.family {
+  font-family: 'Great Vibes', cursive;
+  font-size: 300%;
+  margin-right: 10px;
+  transform: rotate(90deg);
+  position: relative;
+  top: -30px;
+  right: -30px;
+}
+
+.logo {
+  position: relative;
+  top: -80px;
+  right: -43px;
+  width: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container > div {
+  width: 100%;
+  border: #000 2px dashed;
+  border-radius: 7px;
+  display: flex;
+  gap: 15px;
+  justify-content: between;
+  padding: 15px;
+}
+
+.recipe-form {
+  width: 50%;
+  background-color: #f5f5f5;
+  border-radius: 7px;
+  padding: 15px;
+}
+
+.recipe-form h3 {
+}
+
+.recipe-form div {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  padding: 4px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type='checkbox'] {
+  accent-color: #000;
+}
+
+select,
+input {
+  font-size: 16px;
+  padding: 4px;
+  border: none;
+  color: #555;
+}
+
+select {
+  border-bottom: 2px solid #000;
+  border-radius: 7px 7px 0 0;
+}
+
+input[type='text'] {
+  width: 50%;
+  border-bottom: 2px solid #000;
+  border-radius: 7px 7px 0 0;
+}
+
+button {
+  margin-top: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 8px 15px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+}
+
+.recipe {
+  width: 50%;
+  background-color: #f5f5f5;
+  border-radius: 7px;
+  padding: 15px;
+  min-height: 300px;
+  padding-bottom: 45px;
+}
+
+.recipe h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  min-width: 300px;
+  gap: 5px;
+  align-items: center;
+}
+
+.filters span {
+  font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+.filter {
+  margin-top: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 3px 8px;
+  background-color: transparent;
+  border: solid #222 2px;
+  color: #222;
+  min-width: 50px;
+}
+
+.filter:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn-added {
+  border: solid #a2cdf2 2px;
+  color: #a2cdf2;
+}
+
+.btn-added:hover {
+  background-color: #a2cdf2;
+  color: #fff;
+}
+
+.btn-all {
+  border: solid #918abf 2px;
+  color: #918abf;
+}
+
+.btn-all:hover {
+  background-color: #918abf;
+  color: #fff;
+}
+
+.btn-type {
+  border: solid #bd4bbf 2px;
+  color: #bd4bbf;
+}
+
+.btn-type:hover {
+  background-color: #bd4bbf;
+  color: #fff;
+}
+
+.btn-ingredient {
+  border: solid #f2c1bd 2px;
+  color: #f2c1bd;
+}
+
+.btn-ingredient:hover {
+  background-color: #f2c1bd;
+  color: #fff;
+}
+
+.filter-active {
+  background-color: #918abf;
+  color: #fff;
+  border: 2px #918abf solid;
+}
+
+.filter-active:hover {
+  background-color: #918abf;
+  border: 2px #918abf solid;
+}
+
+.recipe ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe li {
+  font-family: sans-serif;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+/* .recipe button {
+  background-color: none;
+} */
+
+.added {
+  text-decoration: line-through;
+}
+
+.delete {
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.btn-edit {
+  margin-left: 25px;
+}
+
+.btn-edit:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.stats {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 90%;
+  border-top: dashed 1px #777;
+  padding-top: 7px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
 }
