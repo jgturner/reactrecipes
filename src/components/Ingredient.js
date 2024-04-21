@@ -28,7 +28,7 @@ export function Ingredient({ ingredient, onDeleteIngredient, onSetUsed }) {
       <div>
         <input className="rounded-sm cursor-pointer" type="checkbox" value={ingredient.used} onChange={() => onSetUsed(ingredient.id)} />
       </div>
-      <div className={ingredient.used ? 'added' : ''}>{`${ingredient.fullMeasurement === '0' ? '' : ingredient.fullMeasurement} ${
+      <div className={ingredient.used ? 'added capitalize' : 'capitalize'}>{`${ingredient.fullMeasurement === '0' ? '' : ingredient.fullMeasurement} ${
         ingredient.partialMeasurement === '0' ? '' : partialMeasurement
       } ${ingredientType} ${ingredientDescription}`}</div>
       <div className="cursor-pointer" onClick={() => onDeleteIngredient(ingredient.id)}>
